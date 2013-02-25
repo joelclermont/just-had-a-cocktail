@@ -35,6 +35,9 @@ facebook_login:
 twitter_login:
     pattern: /login/check-twitter
 
+salesforce_login:
+    pattern: /login/check-salesforce
+
 l_mammino_jhac:
     resource: "@LMamminoJHACBundle/Controller/"
     type:     annotation

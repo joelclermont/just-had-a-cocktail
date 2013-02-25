@@ -49,6 +49,20 @@ class User extends BaseUser
     protected $facebookAccessToken;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="salesforceId", type="string", length=255, nullable=true)
+     */
+    protected $salesforceId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="salesforceAccessToken", type="string", length=255, nullable=true)
+     */
+    protected $salesforceAccessToken;
+
+    /**
      * @var Collection $had
      * @ORM\OneToMany(targetEntity="Had", mappedBy="user")
      */
@@ -90,6 +104,22 @@ class User extends BaseUser
     public function getFacebookId()
     {
         return $this->facebookId;
+    }
+
+    /**
+     * @param string $salesforceId
+     */
+    public function setSalesforceId($salesforceId)
+    {
+        $this->salesforceId = $salesforceId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSalesforceId()
+    {
+        return $this->salesforceId;
     }
 
     /**
@@ -147,6 +177,22 @@ class User extends BaseUser
     public function getFacebookAccessToken()
     {
         return $this->facebookAccessToken;
+    }
+
+    /**
+     * @param string $salesforceAccessToken
+     */
+    public function setSalesforceAccessToken($salesforceAccessToken)
+    {
+        $this->salesforceAccessToken = $salesforceAccessToken;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSalesforceAccessToken()
+    {
+        return $this->salesforceAccessToken;
     }
 
     /**

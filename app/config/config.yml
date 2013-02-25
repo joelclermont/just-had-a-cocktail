@@ -99,6 +99,22 @@ hwi_oauth:
             type:                twitter
             client_id:           %twitter_client_id%
             client_secret:       %twitter_client_secret%
+        salesforce:
+            type:                oauth2
+            client_id:           %salesforce_client_id%
+            client_secret:       %salesforce_client_secret%
+            access_token_url:    https://login.salesforce.com/services/oauth2/token
+            authorization_url:   https://login.salesforce.com/services/oauth2/authorize
+            infos_url:           https://na15.salesforce.com/services/data/v26.0/sobjects/User/005i0000000YojvAAC
+            scope:               ""
+            user_response_class: HWI\Bundle\OAuthBundle\OAuth\Response\AdvancedPathUserResponse
+            paths:
+                identifier: Id
+                nickname:   CommunityNickname
+                first_name: FirstName
+                last_name:  LastName
+                realname:   Name
+                email:      Email
     fosub:
         username_iterations: 30
         # mapping between resource owners (see below) and properties
@@ -106,5 +122,6 @@ hwi_oauth:
             #github: githubId
             #google: googleId
             facebook: facebookId
+            salesforce: salesforceId
     firewall_name: main
     connect: ~

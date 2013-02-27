@@ -64,22 +64,7 @@ footer a
     padding: 20px;
 }
 
-.cocktails-list li a
-{
-    border-radius: 10px;
-    color: #333;
-    display: block;
-    font-size: 1.4em;
-    padding: 10px;
-}
-
-.cocktails-list li a:hover
-{
-    background-color: #b7dff1;
-    color: #101010;
-}
-
-.cocktail-image, .profile-image
+.profile-image
 {
     margin: 20px 0 0 0;
     text-align: center;

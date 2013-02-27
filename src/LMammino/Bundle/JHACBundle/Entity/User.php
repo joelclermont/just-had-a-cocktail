@@ -62,18 +62,6 @@ class User extends BaseUser
      */
     protected $salesforceAccessToken;
 
-    /**
-     * @var Collection $had
-     * @ORM\OneToMany(targetEntity="Had", mappedBy="user")
-     */
-    protected $had;
-
-    public function __construct()
-    {
-        parent::__construct();
-        $this->had = new ArrayCollection();
-    }
-
     public function serialize()
     {
         return serialize(array($this->facebookId, parent::serialize()));
@@ -193,14 +181,6 @@ class User extends BaseUser
     public function getSalesforceAccessToken()
     {
         return $this->salesforceAccessToken;
-    }
-
-    /**
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getHad()
-    {
-        return $this->had;
     }
 
     /**

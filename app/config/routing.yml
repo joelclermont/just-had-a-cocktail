@@ -32,9 +32,6 @@ fos_user_change_password:
 facebook_login:
     pattern: /login/check-facebook
 
-twitter_login:
-    pattern: /login/check-twitter
-
 salesforce_login:
     pattern: /login/check-salesforce
 

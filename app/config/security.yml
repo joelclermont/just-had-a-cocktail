@@ -22,7 +22,6 @@ security:
             oauth:
                 resource_owners:
                     facebook:           "/login/check-facebook"
-                    twitter:            "/login/check-twitter"
                     salesforce:         "/login/check-salesforce"
                 login_path:        /oauth/login
                 failure_path:      /oauth/login

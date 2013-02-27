@@ -89,10 +89,6 @@ hwi_oauth:
                 first_name: firstname
                 last_name: lastname
                 email: email
-        twitter:
-            type:                twitter
-            client_id:           %twitter_client_id%
-            client_secret:       %twitter_client_secret%
         salesforce:
             type:                oauth2
             client_id:           %salesforce_client_id%

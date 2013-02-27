@@ -28,7 +28,6 @@
         "friendsofsymfony/user-bundle": "*",
         "hwi/oauth-bundle": "dev-salesforce-oauth2",
         "oryzone/boilerplate-bundle": "*",
-        "sonata-project/notification-bundle": "*",
         "knplabs/knp-markdown-bundle": "*",
         "ornicar/gravatar-bundle" : "dev-master"
     },

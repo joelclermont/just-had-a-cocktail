@@ -402,12 +402,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/joelclermont/HWIOAuthBundle.git",
-                "reference": "bd28c956135df5a9836a82bb98d8691ced779bec"
+                "reference": "b833e829a136e142a68b48f386b31ab498de1aea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/joelclermont/HWIOAuthBundle/zipball/bd28c956135df5a9836a82bb98d8691ced779bec",
-                "reference": "bd28c956135df5a9836a82bb98d8691ced779bec",
+                "url": "https://api.github.com/repos/joelclermont/HWIOAuthBundle/zipball/b833e829a136e142a68b48f386b31ab498de1aea",
+                "reference": "b833e829a136e142a68b48f386b31ab498de1aea",
                 "shasum": ""
             },
             "require": {
@@ -427,7 +427,7 @@
                 "friendsofsymfony/user-bundle": "to connect FOSUB with this bundle",
                 "symfony/twig-bundle": "to use the Twig hwi_oauth_* functions"
             },
-            "time": "2013-02-27 02:56:50",
+            "time": "2013-02-27 04:26:04",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {

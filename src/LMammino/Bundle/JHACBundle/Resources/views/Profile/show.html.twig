@@ -3,7 +3,7 @@
 {% block head_title %}{{ user.getFullName() }}'s profile - {{ parent() }}{% endblock %}
 
 {% block head_meta_description %}{{ user.getFullName() }}'s profile{% endblock %}
-{% block head_meta_keywords %}cocktail, cocktails, drink, shake, bar, {{ user.getFullName() }}{% endblock %}
+{% block head_meta_keywords %}{{ user.getFullName() }}{% endblock %}
 {% block head_meta_image %}{{ gravatar(app.user.getEmail(), 200) }}{% endblock %}
 
 {% block content %}

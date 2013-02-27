@@ -59,6 +59,10 @@ public function loadUserByOAuthUserResponse(UserResponseInterface $response)
         if(method_exists($user, $serviceAccessTokenSetter))
             $user->$serviceAccessTokenSetter($response->getAccessToken());
 
+        //override password logic with dummy password
+        //users will never login with this
+        $user->setPlainPassword('87xG$*!7BegHVT');
+
         $this->userManager->updateUser($user);
     }
 

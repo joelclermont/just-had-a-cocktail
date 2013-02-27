@@ -6,23 +6,11 @@
 
 
     <parameters>
-        <parameter key="l_mammino_jhac.cocktail_entity.class">LMammino\Bundle\JHACBundle\Entity\Cocktail</parameter>
         <parameter key="l_mammino_jhac.user_entity.class">LMammino\Bundle\JHACBundle\Entity\User</parameter>
-        <parameter key="l_mammino_jhac.cocktail_repository.class">LMammino\Bundle\JHACBundle\Entity\CocktailRepository</parameter>
         <parameter key="l_mammino_jhac.user_repository.class">LMammino\Bundle\JHACBundle\Entity\UserRepository</parameter>
-        <parameter key="l_mammino_jhac.facebook_client.class">LMammino\Bundle\JHACBundle\Facebook\Client</parameter>
-        <parameter key="l_mammino_jhac.consumer.facebook_has_consumer.class">LMammino\Bundle\JHACBundle\Notification\Consumer\FacebookHasConsumer</parameter>
     </parameters>
 
     <services>
-        <!-- CocktailRepository -->
-        <service id="l_mammino_jhac.cocktail_repository"
-                 class="%l_mammino_jhac.cocktail_repository.class%"
-                 factory-service="doctrine.orm.default_entity_manager"
-                 factory-method="getRepository">
-            <argument>%l_mammino_jhac.cocktail_entity.class%</argument>
-        </service>
-
 
         <!-- UserRepository -->
         <service id="l_mammino_jhac.user_repository"
@@ -32,20 +20,6 @@
             <argument>%l_mammino_jhac.user_entity.class%</argument>
         </service>
 
-
-        <!-- Facebook/Client -->
-        <service id="l_mammino_jhac.facebook_client" class="%l_mammino_jhac.facebook_client.class%">
-        </service>
-
-
-        <!-- FacebookHasConsumer -->
-        <service id="l_mammino_jhac.consumer.facebook_has" class="%l_mammino_jhac.consumer.facebook_has_consumer.class%">
-            <argument type="service" id="l_mammino_jhac.facebook_client" />
-            <argument type="service" id="l_mammino_jhac.cocktail_repository" />
-            <argument type="service" id="l_mammino_jhac.user_repository" />
-            <argument>%prod_url%</argument>
-            <tag name="sonata.notification.consumer" type="had" />
-        </service>
     </services>
 
 </container>
